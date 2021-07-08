@@ -1,3 +1,8 @@
-CLIENT_ID = '801f6f84898c4292a7b5c77aa1d8d3a1'
-CLIENT_SECRET = '84d414199e2f472696a617240101feb2'
-REDIRECT_URI = 'http://127.0.0.1:8000/spotify/redirect'
+import os
+from dotenv import load_dotenv, find_dotenv
+
+load_dotenv()
+
+CLIENT_ID = os.getenv("CLIENT_ID")
+CLIENT_SECRET = os.getenv("CLIENT_SECRET")
+REDIRECT_URI = os.getenv("REDIRECT_URI")
