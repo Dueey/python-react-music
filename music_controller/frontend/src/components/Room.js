@@ -86,6 +86,8 @@ export default class Room extends Component {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Credentials": true,
       },
     };
     fetch("/api/leave-room", requestOptions).then((_response) => {
