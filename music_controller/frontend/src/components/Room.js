@@ -84,7 +84,9 @@ export default class Room extends Component {
   leaveButtonPressed() {
     const requestOptions = {
       method: "POST",
-      headers: { "Conent-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+      },
     };
     fetch("/api/leave-room", requestOptions).then((_response) => {
       this.props.leaveRoomCallback();
